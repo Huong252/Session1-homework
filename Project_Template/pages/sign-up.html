@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/sign-up.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/trello-favicon.png"
+      type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <title>Sign up</title>
+  </head>
+  <body>
+    <main class="sign-up-main">
+      <img src="../assets/images/logo.png" alt="Logo" class="logo" />
+      <p class="sign-up-message">Please sign up</p>
+      <!-- form -->
+      <form action="" method="GET" id="sign-up-form">
+        <div class="input-div">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email address" />
+          <input
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Username" />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password" />
+          <i class="fa-solid fa-eye"></i>
+          <i class="fa-solid fa-eye-slash"></i>
+        </div>
+        <p>
+          Already have an account,
+          <a class="signin-link" href="./sign-in.html">click here!</a>
+        </p>
+        <button type="submit" class="btn">Sign up</button>
+      </form>
+      <!-- end form -->
+      <p class="sign-up-footer">&copy; 2025 - Rikkei Education</p>
+    </main>
+
+    <!-- MSG -->
+    <div id="msg">
+      <!-- Validation Message -->
+      <div id="sign-up-validation" class="hidden">
+        <div class="sign-up-validation-header">
+          <i class="fa-solid fa-circle-minus"></i>
+          <p>Error</p>
+          <i class="fa-solid fa-circle-xmark"></i>
+        </div>
+        <div class="sign-up-validation-content">
+          <p class="password-cannot-blank">Mật khẩu không được bỏ trống</p>
+          <p class="username-cannot-blank">
+            Tên người dùng không được bỏ trống
+          </p>
+          <p class="email-cannot-blank">Email không được bỏ trống</p>
+        </div>
+      </div>
+      <!-- Sign up toast -->
+      <div id="sign-up-toast" class="hidden">
+        <i class="fa-solid fa-circle-check"></i>
+        <span class="toast-title">Đăng ký thành công</span>
+      </div>
+      <!-- Sign up error -->
+      <div id="sign-up-error" class="hidden">
+        <div class="email-exist hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span class="email-error-title"
+            >Email đã tồn tại. Đến trang đăng nhập!</span
+          >
+        </div>
+        <div class="email-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span class="email-error-title">Email không đúng định dạng</span>
+        </div>
+        <div class="password-min-length-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span class="password-error-message">Mật khẩu tối thiểu 8 ký tự</span>
+        </div>
+        <div class="password-number-required-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span class="password-error-message"
+            >Mật khẩu phải bao gồm cả chữ số</span
+          >
+        </div>
+        <div class="password-uppercase-lowercase-error hidden">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span class="password-error-message"
+            >Mật khẩu có cả chữ thường và chữ hoa</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/sign-up.js"></script>
+  </body>
+</html>

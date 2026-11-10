@@ -1,0 +1,189 @@
+/* MAIN */
+.sign-up-main {
+  width: 300px;
+  margin: 106px auto 0;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+/* logo */
+.sign-up-main .logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+}
+/* Please sign up */
+.sign-up-main .sign-up-message {
+  font-size: 26px;
+  text-align: left;
+  margin-top: 24px;
+}
+/* form */
+.sign-up-main #sign-up-form {
+  margin-top: 18px;
+}
+#sign-up-form input {
+  width: 100%;
+  border: 1px solid #dee2e6;
+  font-size: 16px;
+  padding: 18px 12px;
+}
+#sign-up-form input::placeholder {
+  color: #212529;
+}
+/* email input */
+#sign-up-form #email {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+/* username input */
+#sign-up-form #username {
+  border-top: none;
+  border-bottom: none;
+}
+/* password input */
+#sign-up-form #password {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-bottom: 10px;
+}
+/* hide / show password */
+#sign-up-form .input-div {
+  position: relative;
+}
+.fa-eye,
+.fa-eye-slash {
+  font-size: 14px;
+  color: #0d6efd;
+  transition: transform 0.5s ease-out;
+  position: absolute;
+  bottom: 32px;
+  right: 12px;
+}
+.input-div .fa-eye-slash {
+  display: none;
+}
+.fa-eye:hover,
+.fa-eye-slash:hover {
+  cursor: pointer;
+  transform: scale(1.2, 1.2);
+}
+/* sign in link */
+#sign-up-form .signin-link {
+  color: #0d6efd;
+}
+/* Sign up button */
+#sign-up-form .btn {
+  color: #ffffff;
+  background-color: #0d6efd;
+  border: 1px solid #0d6efd;
+  border-radius: 6px;
+  width: 100%;
+  padding: 11px;
+  margin: 16px 0 48px;
+  font-size: 16px;
+  transition: transform 0.5s ease-out;
+}
+.btn:hover {
+  cursor: pointer;
+  transform: scale(1.1, 1.1);
+}
+/* footer */
+.sign-up-main .sign-up-footer {
+  color: rgba(33, 37, 41, 0.75);
+}
+
+/* MESSAGE */
+#msg {
+  position: fixed;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.5s ease;
+}
+#msg.show {
+  opacity: 1;
+  transform: translateX(0);
+  top: 22px;
+  left: 26px;
+}
+/* Validation Message */
+#msg #sign-up-validation {
+  font-family: 'Inter', sans-serif;
+  background-color: #ffe5e8;
+  border-radius: 10px;
+  padding: 16px;
+}
+#sign-up-validation .sign-up-validation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+.sign-up-validation-header .fa-circle-minus {
+  text-align: right;
+  font-size: 16px;
+  color: #e8132a;
+}
+.sign-up-validation-header p {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+}
+.sign-up-validation-header .fa-circle-xmark {
+  font-size: 16px;
+  text-align: center;
+  color: #445275;
+}
+#sign-up-validation .sign-up-validation-content {
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 0 24px;
+  margin-top: 8px;
+}
+/* Sign up toast */
+#msg #sign-up-toast {
+  background-color: #e5fff0;
+  padding: 16px 16px 18px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+#sign-up-toast .fa-circle-check {
+  color: #02ee6a;
+  font-size: 20px;
+  margin-right: 3px;
+}
+#sign-up-toast .toast-title {
+  font-size: 14px;
+}
+/* Sign up error */
+#msg #sign-up-error {
+  background-color: #ffe5e8;
+  padding: 10px 18px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+#sign-up-error .fa-circle-exclamation {
+  color: #e8132a;
+  font-size: 16px;
+  margin-right: 3px;
+}
+#sign-up-error > div {
+  padding: 10px 0;
+}
+/* HIDDEN */
+.hidden {
+  display: none;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .sign-up-main {
+    margin: 0;
+  }
+}
